@@ -8,18 +8,12 @@ unsigned long long fibonacchi(int a) {
 }
 
 int main() {
-   /*=== FROM TEACHER ===
-		Инициализируй переменные простого типа сразу.
-		int a{0};
-	*/
-    int a;
+	int a{0};
     cout<<"Enter your number";
     cin>>a;
-    /*=== FROM TEACHER ===
-		Почему a-1 ?
-	*/
-    cout<<fibonacchi(a-1);
+    cout<<fibonacchi(a);
     return 0;
 }
+
 
 
