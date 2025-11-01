@@ -3,10 +3,7 @@ using namespace std;
 
 class Rectangle {
 private:
-	/*=== FROM TEACHER ===
-		Инициализируй переменные простого типа сразу.
-		double width{0};
-	*/
+		double width{0}; 
     double width, height;
 public:
     Rectangle(): width(1), height(1) {
@@ -24,25 +21,10 @@ public:
     ~Rectangle() {
         cout << "Удален " << width << "x" << height << endl;
     }
-    /*=== FROM TEACHER ===
-		Метод должен быть константным.
-	*/
-    double area() { return width * height; }
-    /*=== FROM TEACHER ===
-		Метод должен быть константным.
-	*/
-    double perimeter() { return 2 * (width + height); }
-    /*=== FROM TEACHER ===
-		Метод должен быть константным.
-	*/
-    bool is_square() { return width == height; }
-    /*=== FROM TEACHER ===
-		Метод должен быть константным.
-	*/
+    double area() const { return width * height; }
+    double perimeter() const { return 2 * (width + height); }
+    bool is_square() const { return width == height; }
     double get_width() { return width; }
-    /*=== FROM TEACHER ===
-		Метод должен быть константным.
-	*/
     double get_height() { return height; }
 
     void scale(double factor) {
@@ -55,10 +37,7 @@ public:
             cout<<"error"<<endl;
         }
     }
-    /*=== FROM TEACHER ===
-		Метод должен быть константным.
-	*/
-    void print() {
+    void print() const {
         cout<<"Прямоугольник "<<width<<"x"<<height<<"( площадь: "<<width*height<<" периметр: "<<(width+height)*2<<")"<<endl;
     }
 
